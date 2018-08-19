@@ -1,0 +1,30 @@
+-buildpath: osgi.annotation; version=6.0.1
+-baseline: *
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.1.${tstamp}
+Export-Package: jfilesync_mw.core.ui.javafx.api
+
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
+-runrequires: \
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.eventadmin)(version>=1.4.10))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.8.16))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.gogo.command)(version>=1.0.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.log)(version>=1.0.1))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.metatype)(version>=1.1.6))'
+-resolve: auto
+-runbundles: \
+	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
+	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
+	org.apache.felix.configadmin;version='[1.8.16,1.8.17)',\
+	org.apache.felix.eventadmin;version='[1.4.10,1.4.11)',\
+	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.metatype;version='[1.1.6,1.1.7)'
+Bundle-Category: osgi, file, javafx, api
+Bundle-Description: The JFileSync MW Core UI API Bundle
+Bundle-Copyright: Christoph Graupner
+Bundle-Vendor: WorkingDevelopers.net

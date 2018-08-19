@@ -1,0 +1,8 @@
+.DS_Store
+.gradle/
+generated/
+.metadata
+bin/
+bin_test/
+build/
+.recommenders/
