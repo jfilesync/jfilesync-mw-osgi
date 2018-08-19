@@ -7,8 +7,8 @@ import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.*;
 
 import javafx.stage.Stage;
-import jfilesync_mw.core.ui.javafx.api.JavaFXRootStageProvider;
-import jfilesync_mw.core.ui.javafx.api.JfsMwUiProvider;
+import net.workingdeveloper.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
+import net.workingdeveloper.jfilesync.mw.core.ui.api.JfsMwUiProvider;
 
 @Component(service = JfsMwUiProvider.class)
 public class DefaultJfsMwUiProvider implements JfsMwUiProvider {

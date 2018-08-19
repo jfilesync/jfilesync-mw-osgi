@@ -4,7 +4,7 @@ javac.source: 1.8
 javac.target: 1.8
 
 Bundle-Version: 0.0.1.${tstamp}
-Export-Package: jfilesync_mw.core.ui.javafx.api
+Export-Package: net.workingdeveloper.jfilesync.mw.core.ui.api
 
 -runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
 -runee: JavaSE-1.8

@@ -3,7 +3,7 @@
 	osgi.core;version=6.0,\
 	osgi.cmpn;version=6.0,\
 	jfilesync-mw.core.ui.javafx.initializer;version=latest,\
-	jfilesync-mw.core.ui.javafx.api;version=latest
+	jfilesync-mw.core.ui.api;version=latest
 
 -testpath: \
 	${junit}

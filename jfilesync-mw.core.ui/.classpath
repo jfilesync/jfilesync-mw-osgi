@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="aQute.bnd.classpath.container"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" output="bin_test" path="test"/>
-	<classpathentry kind="src" path="/jfilesync-mw.core.ui.javafx.api"/>
+	<classpathentry kind="src" path="/jfilesync-mw.core.ui.api"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

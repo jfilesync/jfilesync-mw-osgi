@@ -18,7 +18,7 @@
 	javafx.scene.shape
 
 -runbundles: \
-	jfilesync-mw.core.ui.javafx.api;version=snapshot,\
+	jfilesync-mw.core.ui.api;version=snapshot,\
 	jfilesync-mw.core.ui.javafx.initializer;version=snapshot, \
 	jfilesync-mw.core.ui;version=snapshot,\
 	org.apache.felix.configadmin;version='[1.8.16,1.8.17)',\

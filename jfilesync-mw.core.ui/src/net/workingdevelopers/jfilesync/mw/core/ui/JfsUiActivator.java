@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import jfilesync_mw.core.ui.javafx.api.JavaFXRootStageProvider;
+import net.workingdeveloper.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
 
 public class JfsUiActivator implements BundleActivator {
 	public static boolean started = false;

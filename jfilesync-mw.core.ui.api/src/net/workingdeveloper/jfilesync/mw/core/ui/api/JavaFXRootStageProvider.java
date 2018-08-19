@@ -1,4 +1,4 @@
-package jfilesync_mw.core.ui.javafx.api;
+package net.workingdeveloper.jfilesync.mw.core.ui.api;
 
 import org.osgi.annotation.versioning.ProviderType;
 
