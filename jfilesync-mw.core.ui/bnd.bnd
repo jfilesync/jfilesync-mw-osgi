@@ -11,16 +11,17 @@
 
 javac.source: 1.8
 javac.target: 1.8
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
 
 Bundle-Version: 0.0.1.${tstamp}
 Private-Package: net.workingdevelopers.jfilesync.mw.core.ui
--runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
--runee: JavaSE-1.8
 Bundle-Activator: net.workingdevelopers.jfilesync.mw.core.ui.JfsUiActivator
--runrequires: bnd.identity;id='jfilesync-mw.core.ui.javafx.api'
--runbundles: jfilesync-mw.core.ui.javafx.api;version=snapshot
 Export-Package: net.workingdevelopers.jfilesync.mw.core.ui.provider
 Bundle-Category: osgi, javafx, filesync, ui
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
 Bundle-Description: The JFileSync MW Core UI Bundle
+
+-runrequires: bnd.identity;id='jfilesync-mw.core.ui.api'
+-runbundles: jfilesync-mw.core.ui.api;version=snapshot
