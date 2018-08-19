@@ -1,0 +1,19 @@
+-buildpath: \
+	osgi.annotation; version=6.0.1,\
+	osgi.core; version=6.0,\
+	osgi.cmpn; version=6.0
+
+-testpath: \
+	${junit}
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.1.${tstamp}
+Private-Package: net.workingdeveloper.jfilesync.mw.core
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
+Bundle-Category: osgi, filesync
+Bundle-Copyright: Christoph Graupner
+Bundle-Vendor: WorkingDevelopers.net
+Bundle-Description: The JFileSync MW Core Bundle
