@@ -1,1 +1,7 @@
 /cache/
+/local/
+/templates/
+/release/
+!/templates/.gitkeep
+!/release/.gitkeep
+!/local/.gitkeep
