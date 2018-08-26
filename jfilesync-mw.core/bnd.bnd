@@ -17,4 +17,7 @@ Private-Package: net.workingdeveloper.jfilesync.mw.core
 Bundle-Category: osgi, filesync
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
-Bundle-Description: The JFileSync MW Core Bundle
+Bundle-Description: JFileSync MW Core Bundle
+Bundle-ContactAddress: info@jfilesync-mw.net
+Bundle-DocURL: https://docs.jfilesync-mw.net
+Bundle-Activator: net.workingdeveloper.jfilesync.mw.core.JfsMwCoreActivator
