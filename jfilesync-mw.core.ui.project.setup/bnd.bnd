@@ -1,0 +1,15 @@
+Bundle-Version: 0.0.1
+-buildpath: \
+	jfilesync-mw.core.ui.api;version=latest,\
+	jfilesync-mw.core.ui;version=latest,\
+	jfilesync-mw.core;version=latest,\
+	osgi.core
+Bundle-Category: osgi, javafx, filesync, ui
+Bundle-Copyright: Christoph Graupner
+Bundle-Vendor: WorkingDevelopers.net
+Bundle-ContactAddress: info@jfilesync-mw.net
+Bundle-DocURL: https://docs.jfilesync-mw.net
+Export-Package: net.jfilesync.mw.core.ui.project.setup.provider
+Private-Package: net.jfilesync.mw.core.ui.project.setup
+Bundle-Activator: net.jfilesync.mw.core.ui.project.setup.JfsMwCoreUIProjectSetupActivator
+Bundle-Description: JFileSync MM Core UI Project Setup Bundle

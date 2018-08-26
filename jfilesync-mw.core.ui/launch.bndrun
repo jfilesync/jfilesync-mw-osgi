@@ -40,5 +40,6 @@
 	bnd.identity;id='jfilesync-mw.core.ui.javafx.initializer',\
 	bnd.identity;id='jfilesync-mw.core.ui',\
 	bnd.identity;version='latest';id='jfilesync-mw.core.ui.api',\
-	bnd.identity;version='latest';id='jfilesync-mw.core'
+	bnd.identity;version='latest';id='jfilesync-mw.core',\
+	bnd.identity;id='jfilesync-mw.core.ui.project.setup'
 
