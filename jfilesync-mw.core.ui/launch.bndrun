@@ -15,7 +15,8 @@
 	javafx.collections,\
 	javafx.scene.control,\
 	javafx.scene.paint,\
-	javafx.scene.shape
+	javafx.scene.shape, \
+	javafx.fxml
 
 -runbundles: \
 	jfilesync-mw.core.ui.api;version=snapshot,\
