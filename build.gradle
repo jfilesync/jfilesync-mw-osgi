@@ -1,4 +1,22 @@
 // Available to customize the build
 wrapper {
-  jarFile = rootProject.file('.gradle-wrapper/gradle-wrapper.jar')
+    jarFile = rootProject.file('.gradle-wrapper/gradle-wrapper.jar')
 }
+
+task buildnumberplusone {
+    doLast {
+        Properties props = new Properties()
+        File propsFile = new File('gradle.properties')
+        props.load(propsFile.newDataInputStream())
+        def property = 0
+        if (props.containsKey('application.buildnumber')) {
+            property = props.getProperty('application.buildnumber')
+        }
+        Integer nextbuildnum = ((property as Integer) + 1)
+        props.setProperty('application.buildnumber', nextbuildnum.toString())
+        props.store(propsFile.newWriter(), null)
+        props.load(propsFile.newDataInputStream())
+    }
+}
+
+project(":cnf").task("build").dependsOn(buildnumberplusone)
