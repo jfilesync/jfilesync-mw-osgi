@@ -6,11 +6,12 @@ javac.target: 1.8
 -runee: JavaSE-1.8
 
 Bundle-Version: 0.0.1.${tstamp}
-Export-Package: net.workingdeveloper.jfilesync.mw.core.ui.api
 Bundle-Category: osgi, file, javafx, api
 Bundle-Description: The JFileSync MW Core UI API Bundle
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
+Bundle-ContactAddress: info@jfilesync-mw.net
+Bundle-DocURL: https://docs.jfilesync-mw.net
 
 -runrequires: \
 	bnd.identity;id='org.apache.felix.gogo.shell',\
@@ -28,3 +29,8 @@ Bundle-Vendor: WorkingDevelopers.net
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
 	org.apache.felix.log;version='[1.0.1,1.0.2)',\
 	org.apache.felix.metatype;version='[1.1.6,1.1.7)'
+
+Export-Package: \
+	net.workingdeveloper.jfilesync.mw.core.ui.api,\
+	net.jfilesync.mw.core.ui.api.provider,\
+	net.jfilesync.mw.core.ui.api.listener
