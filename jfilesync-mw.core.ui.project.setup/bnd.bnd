@@ -1,9 +1,9 @@
-Bundle-Version: 0.0.1
+Bundle-Version: 0.0.1.${tstamp}
 -buildpath: \
 	jfilesync-mw.core.ui.api;version=latest,\
 	jfilesync-mw.core.ui;version=latest,\
-	jfilesync-mw.core;version=latest,\
-	osgi.core
+	osgi.core,\
+	jfilesync-mw.core.api;version=latest
 Bundle-Category: osgi, javafx, filesync, ui
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net

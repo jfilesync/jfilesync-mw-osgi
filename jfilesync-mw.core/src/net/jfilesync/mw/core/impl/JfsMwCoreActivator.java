@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core;
+package net.jfilesync.mw.core.impl;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

@@ -1,0 +1,5 @@
+Bundle-Activator: net.jfilesync.mw.core.impl.JfsMwCoreActivator
+Private-Package: \
+	net.jfilesync.mw.core.impl,\
+	net.jfilesync.mw.core.impl.model.filediff
+Bundle-Description: JFileSync MW Core Bundle Implementation

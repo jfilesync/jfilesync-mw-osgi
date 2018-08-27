@@ -1,0 +1,4 @@
+Bundle-Description: JFileSync MW Core Bundle API
+Export-Package: \
+	net.jfilesync.mw.core.model.project,\
+	net.jfilesync.mw.core.model.filediff
