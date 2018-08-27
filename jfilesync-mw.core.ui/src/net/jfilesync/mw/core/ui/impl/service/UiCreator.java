@@ -9,10 +9,12 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
+import net.jfilesync.mw.core.ui.api.listener.UiActionListener;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.util.tracker.ServiceTracker;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,12 +45,22 @@ public class UiCreator {
       button.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-          System.out.println("Hello World!");
-          try {
-            getContext().getBundle(0).stop();
-          } catch (BundleException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+          final ServiceTracker<UiActionListener, Object> tracker =
+              new ServiceTracker<>(getContext(), UiActionListener.class,
+                                   null
+              );
+          tracker.open();
+          final Object[] services = tracker.getServices();
+          if (services != null) {
+            try {
+              for (final Object s: services) {
+                ((UiActionListener) s).handle(event);
+              }
+            } catch (Exception e) {
+              e.printStackTrace();
+            }
+          } else {
+            System.out.println("No Service for Application shutdown");
           }
         }
       });
