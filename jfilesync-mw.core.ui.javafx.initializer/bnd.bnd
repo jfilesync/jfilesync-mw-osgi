@@ -20,7 +20,7 @@ Bundle-Vendor: WorkingDevelopers.net
 Bundle-ContactAddress: info@jfilesync-mw.net
 Bundle-DocURL: https://docs.jfilesync-mw.net
 
-Bundle-Activator: net.workingdevelopers.jfilesync.mw.core.ui.javafx.initializer.JfsMwCoreUiJavaFXInitializer
+Bundle-Activator: net.jfilesync.mw.core.ui.javafx.initializer.JfsMwCoreUiJavaFXInitializer
 
-Private-Package: net.workingdevelopers.jfilesync.mw.core.ui.javafx.initializer
-Export-Package: net.workingdevelopers.jfilesync.mw.core.ui.javafx.initializer.provider
+Private-Package: net.jfilesync.mw.core.ui.javafx.initializer
+Export-Package: net.jfilesync.mw.core.ui.javafx.initializer.provider

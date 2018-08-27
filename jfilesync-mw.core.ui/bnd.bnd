@@ -26,12 +26,12 @@ Bundle-Description: The JFileSync MW Core UI Bundle
 Bundle-ContactAddress: info@jfilesync-mw.net
 Bundle-DocURL: https://docs.jfilesync-mw.net
 
-Bundle-Activator: net.workingdevelopers.jfilesync.mw.core.ui.JfsUiActivator
+Bundle-Activator: net.jfilesync.mw.core.ui.JfsUiActivator
 
 Private-Package: \
-	net.workingdevelopers.jfilesync.mw.core.ui,\
-	net.workingdevelopers.jfilesync.mw.core.ui.tracker,\
-	net.workingdevelopers.jfilesync.mw.core.ui.service
-Export-Package: net.workingdevelopers.jfilesync.mw.core.ui.provider
+	net.jfilesync.mw.core.ui,\
+	net.jfilesync.mw.core.ui.tracker,\
+	net.jfilesync.mw.core.ui.service
+Export-Package: net.jfilesync.mw.core.ui.provider
 
 
