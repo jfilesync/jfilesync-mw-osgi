@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core.ui.provider;
+package net.jfilesync.mw.core.ui.impl.provider;
 
 import javafx.stage.Stage;
 import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;

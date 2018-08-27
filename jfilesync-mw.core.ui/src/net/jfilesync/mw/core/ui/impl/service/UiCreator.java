@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core.ui.service;
+package net.jfilesync.mw.core.ui.impl.service;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

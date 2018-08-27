@@ -1,7 +1,7 @@
-package net.jfilesync.mw.core.ui;
+package net.jfilesync.mw.core.ui.impl;
 
 import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
-import net.jfilesync.mw.core.ui.tracker.RootStageServiceTrackerCustomizer;
+import net.jfilesync.mw.core.ui.impl.tracker.RootStageServiceTrackerCustomizer;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
