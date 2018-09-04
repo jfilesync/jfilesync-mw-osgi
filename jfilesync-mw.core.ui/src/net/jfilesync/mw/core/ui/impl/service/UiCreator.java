@@ -35,10 +35,9 @@ public class UiCreator {
       if (null == resource) {
         throw new IllegalStateException("no FXML");
       }
-      BorderPane content = (BorderPane) FXMLLoader.load(
-          resource
-      );
+      BorderPane content    = FXMLLoader.load(resource);
       final MenuBar menuBar = (MenuBar) content.getTop().lookup("main.menu");
+//      serviceTracker = new ServiceTracker<>(MainMenuManager.class)
 
       javafx.scene.control.Button button = new Button("Exit");
       content.setBottom(button);
@@ -65,7 +64,6 @@ public class UiCreator {
         }
       });
       primaryStage.setScene(new Scene(content));
-      primaryStage.show();
     } catch (IOException e) {
 //              logger.error(LogMarker.EXCEPTION, e.getLocalizedMessage(), e);
       e.printStackTrace();
