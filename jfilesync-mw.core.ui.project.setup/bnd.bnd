@@ -2,7 +2,7 @@ Bundle-Version: 0.0.1.${tstamp}
 -buildpath: \
 	osgi.annotation;version=6.0.1,\
 	jfilesync-mw.core.ui.api;version=latest,\
-	jfilesync-mw.core.ui;version=latest,\
+	jfilesync-mw.core.ui.impl;version=latest,\
 	osgi.core;version=6.0,\
 	jfilesync-mw.core;version=latest
 Bundle-Category: osgi, javafx, filesync, ui

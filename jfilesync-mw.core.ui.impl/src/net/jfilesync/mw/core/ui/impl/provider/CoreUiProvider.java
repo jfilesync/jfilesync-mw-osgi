@@ -19,12 +19,13 @@ import org.osgi.util.tracker.ServiceTracker;
 import java.util.Map;
 
 @Component(service = JfsMwUiProvider.class)
-public class DefaultJfsMwUiProvider implements JfsMwUiProvider {
+public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
   private BundleContext                                                    bundleContext;
   private JavaFXRootStageProvider                                          mainStage;
   private ServiceTracker<JavaFXRootStageProvider, JavaFXRootStageProvider> rootStageTracker;
 
+  @Override
   @Activate
   public void activate(ComponentContext c, BundleContext b, Map<String, ?> properties) {
     System.out.println("JfsMwUiProvider Activated");
@@ -52,6 +53,7 @@ public class DefaultJfsMwUiProvider implements JfsMwUiProvider {
     rootStageTracker.open();
   }
 
+  @Override
   @Deactivate
   public void deactivate(ComponentContext c, BundleContext b, Map<String, ?> properties) {
     System.out.println("JfsMwUiProvider DeActivated");
@@ -70,6 +72,7 @@ public class DefaultJfsMwUiProvider implements JfsMwUiProvider {
     Platform.runLater(() -> getMainStage().hide());
   }
 
+  @Override
   @Modified
   public void modified(ComponentContext c, BundleContext b, Map<String, ?> properties) {
     System.out.println("Modified");

@@ -21,7 +21,7 @@
 -runbundles: \
 	jfilesync-mw.core.ui.api;version=snapshot,\
 	jfilesync-mw.core.ui.javafx.initializer;version=snapshot,\
-	jfilesync-mw.core.ui;version=snapshot,\
+	jfilesync-mw.core.ui.impl;version=snapshot,\
 	org.apache.felix.configadmin;version='[1.8.16,1.8.17)',\
 	org.apache.felix.eventadmin;version='[1.4.10,1.4.11)',\
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
@@ -42,7 +42,7 @@
 	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.eventadmin)(version>=1.4.10))',\
 	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.8.16))',\
 	bnd.identity;id='jfilesync-mw.core.ui.javafx.initializer',\
-	bnd.identity;id='jfilesync-mw.core.ui',\
+	bnd.identity;id='jfilesync-mw.core.ui.impl',\
 	bnd.identity;version='latest';id='jfilesync-mw.core.ui.api',\
 	bnd.identity;id='jfilesync-mw.core.ui.project.setup',\
 	bnd.identity;id='osgiuifx.core.impl',\
