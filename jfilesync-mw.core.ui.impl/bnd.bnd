@@ -2,7 +2,7 @@
 	osgi.annotation;version=6.0.1,\
 	osgi.core;version=6.0,\
 	osgi.cmpn;version=6.0,\
-	jfilesync-mw.core.ui.javafx.initializer;version=latest,\
+	osgiuifx.core.javafx.initializer;version=latest,\
 	jfilesync-mw.core.ui.api;version=latest,\
 	jfilesync-mw.core;version=latest,\
 	osgiuifx.core;version=latest

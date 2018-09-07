@@ -1,13 +1,13 @@
-package net.jfilesync.mw.core.ui.javafx.initializer;
+package net.workingdeveloper.osgiuifx.core.javafx.initializer;
 
 import javafx.application.Platform;
-import net.jfilesync.mw.core.ui.javafx.initializer.provider.JfsMwCoreUiJfxApplication;
+import net.workingdeveloper.osgiuifx.core.javafx.initializer.provider.JfsMwCoreUiJfxApplication;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 import java.util.concurrent.Executors;
 
-public class JfsMwCoreUiJavaFXInitializer implements BundleActivator {
+public class OsgiUiFxCoreJavaFXInitializer implements BundleActivator {
   private static boolean started = false;
 
   @Override
@@ -21,13 +21,13 @@ public class JfsMwCoreUiJavaFXInitializer implements BundleActivator {
       started = true;
     }
 
-    System.out.println("JfsCoreUI JavaFX initialization Bundle started");
+    System.out.println("OsgiUiFxCore JavaFX initialization Bundle started");
   }
 
   @Override
   public void stop(BundleContext context) throws Exception {
     Platform.exit();
     System.out.println("JavaFX Platform stopped");
-    System.out.println("JfsCoreUI JavaFX initialization Bundle stopped");
+    System.out.println("OsgiUiFxCore JavaFX initialization Bundle stopped");
   }
 }

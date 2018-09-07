@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core.ui.javafx.initializer.provider;
+package net.workingdeveloper.osgiuifx.core.javafx.initializer.provider;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;

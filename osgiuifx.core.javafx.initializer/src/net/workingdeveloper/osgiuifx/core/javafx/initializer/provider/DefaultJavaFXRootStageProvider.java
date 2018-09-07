@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core.ui.javafx.initializer.provider;
+package net.workingdeveloper.osgiuifx.core.javafx.initializer.provider;
 
 import javafx.stage.Stage;
 import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;

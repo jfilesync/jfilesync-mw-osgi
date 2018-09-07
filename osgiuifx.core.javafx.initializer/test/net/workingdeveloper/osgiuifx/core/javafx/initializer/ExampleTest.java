@@ -1,4 +1,4 @@
-package net.jfilesync.mw.core.ui.javafx.initializer;
+package net.workingdeveloper.osgiuifx.core.javafx.initializer;
 
 import org.junit.Test;
 

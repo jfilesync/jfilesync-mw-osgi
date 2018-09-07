@@ -13,14 +13,13 @@ javac.target: 1.8
 -runee: JavaSE-1.8
 
 Bundle-Version: 0.0.1.${tstamp}
-Bundle-Description: The JFileSync MW Core UI JavaFX Initializer Bundle
-Bundle-Category: osgi, javafx, filesync, ui
+Bundle-Description: The OsgiUIfx Core JavaFX Initializer Bundle
+Bundle-Category: osgi, javafx, ui
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
 Bundle-ContactAddress: info@jfilesync-mw.net
-Bundle-DocURL: https://docs.jfilesync-mw.net
 
-Bundle-Activator: net.jfilesync.mw.core.ui.javafx.initializer.JfsMwCoreUiJavaFXInitializer
+Bundle-Activator: net.workingdeveloper.osgiuifx.core.javafx.initializer.OsgiUiFxCoreJavaFXInitializer
 
-Private-Package: net.jfilesync.mw.core.ui.javafx.initializer
-Export-Package: net.jfilesync.mw.core.ui.javafx.initializer.provider
+Private-Package: net.workingdeveloper.osgiuifx.core.javafx.initializer
+Export-Package: net.workingdeveloper.osgiuifx.core.javafx.initializer.provider
