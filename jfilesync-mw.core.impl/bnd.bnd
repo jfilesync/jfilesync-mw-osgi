@@ -1,0 +1,23 @@
+-buildpath: \
+	osgi.annotation;version=6.0.1,\
+	osgi.core;version=6.0,\
+	osgi.cmpn;version=6.0,\
+	jfilesync-mw.core;version=latest
+-baseline: *
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Category: osgi, filesync
+Bundle-Copyright: Christoph Graupner
+Bundle-Vendor: WorkingDevelopers.net
+Bundle-Description: JFileSync MW Core Implementation Bundle
+Bundle-ContactAddress: info@jfilesync-mw.net
+Bundle-DocURL: https://docs.jfilesync-mw.net
+
+Bundle-Version: 0.0.1.${tstamp}
+Bundle-Activator: net.jfilesync.mw.core.impl.JfsMwCoreActivator
+
+Private-Package: \
+	net.jfilesync.mw.core.impl,\
+	net.jfilesync.mw.core.impl.model.filediff
+	

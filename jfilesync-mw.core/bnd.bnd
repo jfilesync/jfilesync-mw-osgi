@@ -13,10 +13,14 @@ javac.target: 1.8
 
 
 Bundle-Version: 0.0.1.${tstamp}
-Bundle-Category: osgi, filesync
+Bundle-Category: osgi, filesync, api
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
-Bundle-Description: JFileSync MW Core Bundle
+Bundle-Description: JFileSync MW Core API Bundle
 Bundle-ContactAddress: info@jfilesync-mw.net
 Bundle-DocURL: https://docs.jfilesync-mw.net
--sub: *.bnd
+
+Export-Package: \
+	net.jfilesync.mw.core.model.project,\
+	net.jfilesync.mw.core.common,\
+	net.jfilesync.mw.core.model.filediff
