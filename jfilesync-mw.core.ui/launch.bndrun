@@ -1,4 +1,4 @@
--runfw: org.apache.felix.framework;version=5
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
 -runee: JavaSE-1.8
 
 -runsystemcapabilities: ${native_capability}
@@ -29,7 +29,11 @@
 	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
 	org.apache.felix.metatype;version='[1.1.6,1.1.7)',\
 	org.apache.felix.scr;version='[2.0.14,2.0.15)',\
-	jfilesync-mw.core;version=snapshot
+	jfilesync-mw.core.api;version=snapshot,\
+	jfilesync-mw.core.impl;version=snapshot,\
+	jfilesync-mw.core.ui.project.setup;version=snapshot,\
+	osgiuifx.core;version=snapshot,\
+	osgiuifx.core.impl;version=snapshot
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
@@ -40,6 +44,9 @@
 	bnd.identity;id='jfilesync-mw.core.ui.javafx.initializer',\
 	bnd.identity;id='jfilesync-mw.core.ui',\
 	bnd.identity;version='latest';id='jfilesync-mw.core.ui.api',\
-	bnd.identity;version='latest';id='jfilesync-mw.core',\
-	bnd.identity;id='jfilesync-mw.core.ui.project.setup'
+	bnd.identity;id='jfilesync-mw.core.ui.project.setup',\
+	bnd.identity;id='osgiuifx.core.impl',\
+	bnd.identity;id='osgiuifx.core',\
+	bnd.identity;id='jfilesync-mw.core.impl',\
+	bnd.identity;id='jfilesync-mw.core.api'
 

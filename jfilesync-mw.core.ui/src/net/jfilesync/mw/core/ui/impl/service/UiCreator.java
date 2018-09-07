@@ -8,8 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
 import net.jfilesync.mw.core.ui.api.listener.UiActionListener;
+import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;
+
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.framework.FrameworkUtil;

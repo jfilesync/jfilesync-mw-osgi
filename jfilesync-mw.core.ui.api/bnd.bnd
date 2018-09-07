@@ -1,4 +1,6 @@
--buildpath: osgi.annotation; version=6.0.1
+-buildpath: \
+	osgi.annotation;version=6.0.1,\
+	osgiuifx.core;version=latest
 -baseline: *
 javac.source: 1.8
 javac.target: 1.8
@@ -33,4 +35,5 @@ Bundle-DocURL: https://docs.jfilesync-mw.net
 Export-Package: \
 	net.jfilesync.mw.core.ui.api,\
 	net.jfilesync.mw.core.ui.api.provider,\
-	net.jfilesync.mw.core.ui.api.listener
+	net.jfilesync.mw.core.ui.api.listener,\
+	net.jfilesync.mw.core.ui.api.menu

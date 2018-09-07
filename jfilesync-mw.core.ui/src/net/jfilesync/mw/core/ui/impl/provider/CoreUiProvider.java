@@ -2,9 +2,11 @@ package net.jfilesync.mw.core.ui.impl.provider;
 
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
+import net.jfilesync.mw.core.common.ServiceLifeCycle;
 import net.jfilesync.mw.core.ui.api.JfsMwUiProvider;
 import net.jfilesync.mw.core.ui.impl.service.UiCreator;
+import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;
+
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.component.ComponentContext;

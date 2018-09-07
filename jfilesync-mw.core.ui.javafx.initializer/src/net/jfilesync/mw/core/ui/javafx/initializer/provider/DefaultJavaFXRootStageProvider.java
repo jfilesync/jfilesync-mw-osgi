@@ -1,7 +1,7 @@
 package net.jfilesync.mw.core.ui.javafx.initializer.provider;
 
 import javafx.stage.Stage;
-import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
+import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;
 
 public class DefaultJavaFXRootStageProvider implements JavaFXRootStageProvider {
 

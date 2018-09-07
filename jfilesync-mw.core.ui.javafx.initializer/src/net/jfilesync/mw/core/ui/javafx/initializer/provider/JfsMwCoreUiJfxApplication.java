@@ -5,7 +5,7 @@ import org.osgi.framework.FrameworkUtil;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import net.jfilesync.mw.core.ui.api.JavaFXRootStageProvider;
+import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;
 
 public class JfsMwCoreUiJfxApplication extends Application {
 
