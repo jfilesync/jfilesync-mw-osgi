@@ -11,7 +11,8 @@ javac.source: 1.8
 javac.target: 1.8
 
 Bundle-Version: 0.0.0.${tstamp}
-Private-Package: net.workingdeveloper.osgiuifx.core.impl
+Private-Package: net.workingdeveloper.osgiuifx.core.impl,\
+	net.workingdeveloper.osgiuifx.core.impl.events
 Bundle-Copyright: Christoph Graupner
 Bundle-Vendor: WorkingDevelopers.net
 Bundle-Category: osgi, javafx, ui

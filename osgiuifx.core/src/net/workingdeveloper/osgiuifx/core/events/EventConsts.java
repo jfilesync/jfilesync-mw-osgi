@@ -1,8 +1,8 @@
-package net.jfilesync.mw.core.ui.api.listener;
+package net.workingdeveloper.osgiuifx.core.events;
 
 /**
  * @author Christoph Graupner <ch.graupner@workingdeveloper.net>
  */
 public interface EventConsts {
-  String APPLICATION_EXIT = "menu.main.file.exit";
+  String UI_CREATED       = "ui.created";
 }

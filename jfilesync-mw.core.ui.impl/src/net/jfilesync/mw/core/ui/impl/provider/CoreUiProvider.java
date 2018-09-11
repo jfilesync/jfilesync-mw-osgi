@@ -1,37 +1,39 @@
 package net.jfilesync.mw.core.ui.impl.provider;
 
 import javafx.application.Platform;
+import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
-import net.jfilesync.mw.core.common.ServiceLifeCycle;
 import net.jfilesync.mw.core.ui.api.JfsMwUiProvider;
 import net.jfilesync.mw.core.ui.impl.service.UiCreator;
+import net.workingdeveloper.osgiuifx.core.common.ServiceLifeCycle;
+import net.workingdeveloper.osgiuifx.core.menu.MenuManager;
 import net.workingdeveloper.osgiuifx.core.provider.JavaFXRootStageProvider;
-
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.component.ComponentContext;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Modified;
+import org.osgi.service.component.annotations.*;
 import org.osgi.util.tracker.ServiceTracker;
 
 import java.util.Map;
 
-@Component(service = JfsMwUiProvider.class)
+@Component(service = JfsMwUiProvider.class, immediate = true, scope = ServiceScope.SINGLETON)
 public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
   private BundleContext                                                    bundleContext;
   private JavaFXRootStageProvider                                          mainStage;
+  @Reference
+  private MenuManager                                                      menuManager;
   private ServiceTracker<JavaFXRootStageProvider, JavaFXRootStageProvider> rootStageTracker;
 
   @Override
   @Activate
-  public void activate(ComponentContext c, BundleContext b, Map<String, ?> properties) {
+  public void activate(ComponentContext componentContext, BundleContext bundleContext, Map<String, ?> properties) {
     System.out.println("JfsMwUiProvider Activated");
-    bundleContext = b;
+    this.bundleContext = bundleContext;
     rootStageTracker =
-        new ServiceTracker<JavaFXRootStageProvider, JavaFXRootStageProvider>(b, JavaFXRootStageProvider.class, null) {
+        new ServiceTracker<JavaFXRootStageProvider, JavaFXRootStageProvider>(
+            bundleContext, JavaFXRootStageProvider.class, null)
+        {
           @Override
           public JavaFXRootStageProvider addingService(final ServiceReference<JavaFXRootStageProvider> reference) {
             System.out.print("RootStage added");
@@ -55,7 +57,7 @@ public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
   @Override
   @Deactivate
-  public void deactivate(ComponentContext c, BundleContext b, Map<String, ?> properties) {
+  public void deactivate(ComponentContext componentContext, BundleContext bundleContext, Map<String, ?> properties) {
     System.out.println("JfsMwUiProvider DeActivated");
     hide();
     mainStage = null;
@@ -64,17 +66,22 @@ public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
   @Override
   public Stage getMainStage() {
-    return mainStage.getStage();
+    if (mainStage != null) {
+      return mainStage.getStage();
+    }
+    return null;
   }
 
   @Override
   public void hide() {
-    Platform.runLater(() -> getMainStage().hide());
+    if (mainStage != null) {
+      Platform.runLater(() -> getMainStage().hide());
+    }
   }
 
   @Override
   @Modified
-  public void modified(ComponentContext c, BundleContext b, Map<String, ?> properties) {
+  public void modified(ComponentContext componentContext, BundleContext bundleContext, Map<String, ?> properties) {
     System.out.println("Modified");
   }
 
@@ -88,5 +95,8 @@ public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
     UiCreator uiCreator = bundleContext.getService(serviceReference);
     uiCreator.create(mainStage);
+    menuManager.setMainMenuBar((MenuBar) mainStage.getStage().getScene().lookup("#" + UiConsts.MAIN_MENUBAR));
+    menuManager.createMainMenus();
+    bundleContext.ungetService(serviceReference);
   }
 }

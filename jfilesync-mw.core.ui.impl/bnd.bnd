@@ -31,9 +31,9 @@ Bundle-Activator: net.jfilesync.mw.core.ui.impl.JfsUiActivator
 
 Private-Package: \
 	net.jfilesync.mw.core.ui.impl,\
-	net.jfilesync.mw.core.ui.impl.tracker,\
 	net.jfilesync.mw.core.ui.impl.service,\
-	net.jfilesync.mw.core.ui.impl.listener
-Export-Package: net.jfilesync.mw.core.ui.impl.provider
+	net.jfilesync.mw.core.ui.impl.menu,\
+	net.jfilesync.mw.core.ui.impl.provider,\
+	net.jfilesync.mw.core.ui.impl.events
 
 
