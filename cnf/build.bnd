@@ -1,30 +1,15 @@
-# Configure Repositories
--plugin.1.Central: \
-	aQute.bnd.repository.maven.provider.MavenBndRepository; \
-		releaseUrl=https://repo.maven.apache.org/maven2/; \
-		index=${.}/central.maven; \
-		name="Central"
+-sources:true
 
--plugin.2.Local: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Local; \
-		pretty = true; \
-		local = ${build}/local
+javac.source: 1.8
+javac.target: 1.8
 
--plugin.3.Templates: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Templates; \
-		pretty = true; \
-		local = ${build}/templates
-
--plugin.4.Release: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Release; \
-		pretty = true; \
-		local = ${build}/release
-
--releaserepo: Release
--baselinerepo: Release
+#-runfw: org.apache.felix.framework;version='[6.0.1,6.0.1]'
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
 
 # JUnit
 junit: org.apache.servicemix.bundles.junit; version=4.12
+
+osgi.annotation.version: 6.0.1
+osgi.core.version: 6.0.0
+osgi.cmpn.version: 6.0.0

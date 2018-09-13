@@ -1,10 +1,8 @@
 -buildpath: \
-	osgi.annotation;version=6.0.1,\
-	osgi.core;version=6.0,\
-	osgi.cmpn;version=6.0
+	osgi.annotation;version=${osgi.annotation.version},\
+	osgi.core;version=${osgi.core.version},\
+	osgi.cmpn;version=${osgi.cmpn.version}
 -baseline: *
-javac.source: 1.8
-javac.target: 1.8
 
 Bundle-Version: 0.0.1.${tstamp}
 Export-Package: \
