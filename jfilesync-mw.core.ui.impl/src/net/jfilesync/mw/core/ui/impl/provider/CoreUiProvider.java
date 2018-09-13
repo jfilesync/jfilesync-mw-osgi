@@ -74,9 +74,11 @@ public class CoreUiProvider implements JfsMwUiProvider, ServiceLifeCycle {
 
   @Override
   public void hide() {
-    if (mainStage != null) {
-      Platform.runLater(() -> getMainStage().hide());
-    }
+    Platform.runLater(() -> {
+      if (mainStage != null && mainStage.getStage() != null) {
+        mainStage.getStage().hide();
+      }
+    });
   }
 
   @Override
