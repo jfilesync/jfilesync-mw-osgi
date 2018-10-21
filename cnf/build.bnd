@@ -3,13 +3,12 @@
 javac.source: 1.8
 javac.target: 1.8
 
-#-runfw: org.apache.felix.framework;version='[6.0.1,6.0.1]'
--runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runfw: org.apache.felix.framework;version='[6.0.1,6.0.1]'
 -runee: JavaSE-1.8
 
 # JUnit
 junit: org.apache.servicemix.bundles.junit; version=4.12
 
-osgi.annotation.version: 6.0.1
-osgi.core.version: 6.0.0
-osgi.cmpn.version: 6.0.0
+osgi.annotation.version: 7.0.0
+osgi.core.version: 7.0.0
+osgi.cmpn.version: 7.0.0

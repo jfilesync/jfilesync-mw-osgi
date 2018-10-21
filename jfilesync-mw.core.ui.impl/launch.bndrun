@@ -1,9 +1,14 @@
 -runfw: org.apache.felix.framework;version='[6.0.1,6.0.1]'
 -runee: JavaSE-1.8
 
+-ignore-standalone:
+
+-runproperties: logback.configurationFile=file:${.}/logback.xml
+
 -runsystemcapabilities: ${native_capability}
 
--resolve.effective: active;skip:="osgi.service"
+-resolve.effective: resolve, active
+-resolve: auto
 
 -runsystempackages: \
 	javafx.application.Platform, \
@@ -17,6 +22,29 @@
 	javafx.scene.paint,\
 	javafx.scene.shape, \
 	javafx.fxml
+
+-runblacklist: bnd.identity;id='osgi.cmpn'
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.metatype)(version>=1.1.6))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.eventadmin)(version>=1.4.10))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.8.16))',\
+	osgi.identity;filter:='(&(osgi.identity=org.osgi.service.log)(version>=1.4.0))',\
+	bnd.identity;id='osgiuifx.core',\
+	bnd.identity;id='osgiuifx.core.impl',\
+	bnd.identity;id='osgiuifx.core.javafx.initializer',\
+	bnd.identity;version='latest';id='jfilesync-mw.core',\
+	bnd.identity;id='jfilesync-mw.core.impl',\
+	bnd.identity;version='latest';id='jfilesync-mw.core.ui.api',\
+	bnd.identity;id='jfilesync-mw.core.ui.impl',\
+	bnd.identity;id='jfilesync-mw.core.ui.project.setup',\
+	bnd.identity;version='1.2.0';id='org.apache.felix.log',\
+	bnd.identity;version='1.0.0';id='org.apache.felix.logback',\
+	bnd.identity;version='1.2.3';id='ch.qos.logback.classic',\
+	bnd.identity;id='org.apache.felix.log.extension'
+
 
 -runbundles: \
 	jfilesync-mw.core.ui.api;version=snapshot,\
@@ -33,21 +61,14 @@
 	org.apache.felix.gogo.runtime;version='[1.1.0,1.1.1)',\
 	org.apache.felix.gogo.shell;version='[1.1.0,1.1.1)',\
 	org.apache.felix.metatype;version='[1.2.0,1.2.1)',\
-	org.apache.felix.scr;version='[2.1.6,2.1.7)'
-
--runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.metatype)(version>=1.1.6))',\
-	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.eventadmin)(version>=1.4.10))',\
-	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.8.16))',\
-	bnd.identity;id='osgiuifx.core',\
-	bnd.identity;id='osgiuifx.core.impl',\
-	bnd.identity;id='osgiuifx.core.javafx.initializer',\
-	bnd.identity;version='latest';id='jfilesync-mw.core',\
-	bnd.identity;id='jfilesync-mw.core.impl',\
-	bnd.identity;version='latest';id='jfilesync-mw.core.ui.api',\
-	bnd.identity;id='jfilesync-mw.core.ui.impl',\
-	bnd.identity;id='jfilesync-mw.core.ui.project.setup'
-
--resolve: auto
+	org.apache.felix.scr;version='[2.1.6,2.1.7)',\
+	org.apache.felix.log;version='[1.2.0,1.2.1)',\
+	ch.qos.logback.classic;version='[1.2.3,1.2.4)',\
+	ch.qos.logback.core;version='[1.2.3,1.2.4)',\
+	org.apache.felix.logback;version='[1.0.0,1.0.1)',\
+	org.osgi.service.log;version='[1.4.0,1.4.1)',\
+	org.osgi.util.function;version='[1.1.0,1.1.1)',\
+	org.osgi.util.promise;version='[1.1.0,1.1.1)',\
+	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
+	slf4j.api;version='[1.7.25,1.7.26)',\
+	org.apache.felix.log.extension;version='[1.0.0,1.0.1)'

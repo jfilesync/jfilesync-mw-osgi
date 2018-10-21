@@ -9,11 +9,11 @@ import org.osgi.framework.BundleContext;
 public class JfsMwCoreActivator implements BundleActivator {
   @Override
   public void start(final BundleContext context) throws Exception {
-    System.out.println("JFileSync MW Core Bundle started");
+    System.out.println("JFileSync MW Core Implementation Bundle started");
   }
 
   @Override
   public void stop(final BundleContext context) throws Exception {
-    System.out.println("JFileSync MW Core Bundle stopped");
+    System.out.println("JFileSync MW Core Implementation Bundle stopped");
   }
 }
